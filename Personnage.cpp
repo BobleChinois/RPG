@@ -1,34 +1,36 @@
 #include <iostream>
 #include <string>
+#include "Personnage.h"
 #include "Arme.h"
 
 using namespace std;
 
-class Personnage
-{
-    public:
-    Personnage() : m_vie(100), m_rad(10), m_arme(Arme)
+Personnage::Personnage():m_vie(100), m_rad(10)
     {
 
     }
-    Personnage(string nomArme,int degatsArme,int rad) : m_vie(100),m_arme(nomArme, degatsArme),m_rad(rad)
+Personnage::Personnage(string nomArme,int degatsArme, int usureArme) : m_vie(100), m_rad(10), m_arme(nomArme, degatsArme, usureArme)
     {
 
     }
-    void recevoirDegats(int nbDegats)
+Personnage::~Personnage()
+    {
+
+    }
+void Personnage::recevoirDegats(int nbDegats)
     {
         m_vie -= nbDegats;
         if (m_vie<0)
-        {
-            m_vie=0;
-        }
+            {
+                m_vie=0;
+            }
 
     }
-    void attaquer(Personnage &cible)
+void Personnage::attaquer(Personnage &cible)
     {
         cible.recevoirDegats(m_arme.getDegats());
     }
-    void soin(int qtePtVie)
+void Personnage::soin(int qtePtVie)
     {
         m_vie+=qtePtVie;
 
@@ -37,27 +39,18 @@ class Personnage
             m_vie=100;
         }
     }
-    void changerArme(string nomNlleArme, int degatsNlleArme)
+void Personnage::changerArme(string nomNlleArme, int degatsNlleArme)
     {
         m_arme.changerArme(nomNlleArme, degatsNlleArme);
     }
-    bool vivant()
+bool Personnage::vivant() const
     {
             return m_vie>0;
     }
-    void afficherEtat() const
+void Personnage::afficherEtat() const
     {
         cout<<"Vie : "<<m_vie<<endl;
         cout<<"Radioactivité : "<<m_rad<<endl;
         m_arme.afficher();
     }
-    ~Personnage()
-    {
 
-    }
-
-    private:
-    int m_vie;
-    int m_rad;
-    Arme m_arme;
-};

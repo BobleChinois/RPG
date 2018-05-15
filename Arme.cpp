@@ -1,25 +1,24 @@
 #include <iostream>
 #include <string>
+#include "Arme.h"
 
 
 using namespace std;
 
-class Arme
-{
-    public :
-    Arme():m_nom("Poings"), m_degats(10), m_usure(20)
+
+Arme::Arme():m_nom("Poings"), m_degats(10), m_usure(20)
     {
 
     }
-    Arme(std::string nom, int degats, int usure):m_nom(nom),m_degats(degats),m_usure(usure)
+Arme::Arme(std::string nom, int degats, int usure):m_nom(nom),m_degats(degats),m_usure(usure)
     {
 
     }
-    int getDegats() const
+int Arme::getDegats() const
     {
         return m_degats;
     }
-    void degradation(int usure, int ptUtilisation)
+void Arme::degradation(int usure, int ptUtilisation)
     {
         m_usure-=ptUtilisation;
         if (m_usure<0)
@@ -28,17 +27,13 @@ class Arme
             m_degats/=2;
         }
     }
-    void changerArme(std::string nom, int degats)
+void Arme::changerArme(std::string nom, int degats)
     {
         m_nom=nom;
         m_degats=degats;
     }
-    void afficher() const
+void Arme::afficher() const
     {
         cout<<"Arme : "<<m_nom<<endl<<"Dégâts : "<<m_degats<<endl<<"Usure : "<<m_usure<<endl;
     }
-    private :
-    std::string m_nom;
-    int m_degats;
-    int m_usure;
-};
+

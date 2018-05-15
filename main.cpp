@@ -2,13 +2,11 @@
 #include <string>
 #include "Personnage.h"
 
-
-
 using namespace std;
 
 int main()
 {
-    Personnage ian, canigou("Crocs", 20, 20);
+    Personnage ian, canigou;
 
     ian.attaquer(canigou);
     canigou.attaquer(ian);

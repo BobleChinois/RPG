@@ -7,20 +7,18 @@
 
 class Personnage
 {
+    int m_vie, m_rad;
+    Arme m_arme;
+
     public:
     Personnage();
-    Personnage(int rad, std::string nomArme, int degatsArme);
+    Personnage(std::string nomArme, int degatsArme, int usureArme);
     ~Personnage();
-    void recevoir_Degats(int nbDegats);
+    void recevoirDegats(int nbDegats);
     void attaquer(Personnage &cible);
     void soin(int qtePtVie);
     void changerArme(std::string nomNlleArme, int degatsNlleArme);
-    bool vivant();
+    bool vivant() const;
     void afficherEtat() const;
 
-
-    private:
-    int m_vie;
-    int m_rad;
-    Arme m_arme;
 };
