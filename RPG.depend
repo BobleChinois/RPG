@@ -1,0 +1,42 @@
+# depslib dependency file v1.0
+1526293242 source:/home/sosthene/Github/RPG/main.cpp
+	<iostream>
+	<string>
+	"Personnage.h"
+
+1526293344 /home/sosthene/Github/RPG/Personnage.h
+	<iostream>
+	<string>
+	"Arme.h"
+
+1525861110 source:/home/sosthene/Github/RPG/Personnage.cpp
+	<iostream>
+	<string>
+
+1526291395 source:/home/sosthene/Github/RPG/Arme.cpp
+	<iostream>
+	<string>
+
+1526293582 /home/sosthene/Github/RPG/Arme.h
+	<iostream>
+	<string>
+
+1526400277 source:/home/sosthene/Github/RPG.git/Arme.cpp
+	<iostream>
+	"Arme.h"
+
+1526400153 source:/home/sosthene/Github/RPG.git/main.cpp
+	<iostream>
+	<string>
+	"Personnage.h"
+
+1526398381 /home/sosthene/Github/RPG.git/Personnage.h
+	"Arme.h"
+
+1526400267 /home/sosthene/Github/RPG.git/Arme.h
+	<string>
+
+1526400211 source:/home/sosthene/Github/RPG.git/Personnage.cpp
+	<iostream>
+	"Personnage.h"
+
