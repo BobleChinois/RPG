@@ -1,7 +1,6 @@
 #include <iostream>
-#include <string>
+
 #include "Personnage.h"
-#include "Arme.h"
 
 using namespace std;
 

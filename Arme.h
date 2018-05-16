@@ -1,8 +1,6 @@
 #pragma once
 
-#include <iostream>
 #include <string>
-
 
 class Arme
 {
@@ -12,10 +10,11 @@ class Arme
     public :
     Arme ();
     Arme(std::string nom, int degats, int usure);
+    ~Arme();
     int getDegats() const;
     void degradation(int usure, int ptUtilisation);
     void changerArme(std::string nom, int degats);
     void afficher() const;
-    ~Arme();
+
 
 };
