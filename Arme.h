@@ -12,9 +12,7 @@ class Arme
     Arme(std::string nom, int degats, int usure);
     ~Arme();
     int getDegats() const;
-    void degradation(int usure, int ptUtilisation);
-    void changerArme(std::string nom, int degats);
+    void degradation (int usure, int ptUtilisation);
+    void changerArme (std::string nom, int degats);
     void afficher() const;
-
-
 };
